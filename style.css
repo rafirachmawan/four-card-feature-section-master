@@ -93,43 +93,35 @@ p {
 }
 
 img {
-  width: 2rem;
+  width: 3rem;
   position: absolute;
   bottom: 5px;
   right: 5px;
 }
-
-@media (max-width: 30rem) {
-  body {
-    height: auto;
-    width: auto;
-  }
+@media (max-width: 1000px) {
   .container {
-    height: auto;
-    width: auto;
+    padding: 3rem; /* Kurangi padding di mobile */
+  }
+  .container h1 {
+    padding-top: 50px;
   }
 
   .cards {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    flex-direction: column;
-    border: 0;
-  }
-
-  .first_column,
-  .second_column,
-  .third_column {
-    padding: 0;
-    border: 0;
-    margin: 0;
+    flex-direction: column; /* Ubah menjadi kolom pada layar kecil */
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .supervisor,
   .team_builder,
   .calculator,
   .karma {
-    height: 100%;
-    margin-bottom: 1rem;
+    width: 100%; /* Lebar penuh pada layar kecil */
+    height: 200px; /* Tetapkan tinggi tetap agar tetap kotak */
+  }
+
+  img {
+    width: 3rem;
+    margin: 10px;
   }
 }
